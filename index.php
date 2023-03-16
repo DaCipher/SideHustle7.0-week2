@@ -1,8 +1,8 @@
 <?php
 
 $pvc = false; // Accepts True or false, 1 or 0
-$age = 10;
-$ward = 21;
+$age = 17;
+$ward = 22;
 
 $errors = [
   'age' => "",
@@ -23,15 +23,15 @@ if ($ward != 20) {
 }
 
 $pvcstatus = (!$pvc) ? "Not Enrolled\n" : "Enrolled\n"; // Customise PVC Status
-echo "YOUR DETAILS\n";
+echo "VOTER DETAILS\n";
 echo "PVC: $pvcstatus";
 echo "Age: $age\n";
 echo "Ward: $ward\n\n";
-echo "YOUR STATUS\n";
+echo "VOTER STATUS\n";
 
 // Check if there are errors.
 if (empty($errors['pvc']) && empty($errors['age']) & empty($errors['ward'])) {
-  echo "Hurray! You are eligible to vote!\n";
+  echo "Voter eligible to vote.\n";
 } else {
   // Loop through the error bag
   foreach ($errors as $error) {
